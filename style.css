@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+
+    .content {
+        height: 60dvh;
+        width: 75dvw;
+        max-width: 1440px;
+
+      .canvas {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(153, 214, 255);
+        border: 5px solid rgb(161, 160, 160);
+      }
+    }
+  }
+}
