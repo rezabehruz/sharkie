@@ -32,7 +32,6 @@ class PlayRome {
   }
 
   drawObject(obj) {
-
     this.ctx.drawImage(obj.img, obj.x, obj.y, obj.width, obj.height);
   }
 }

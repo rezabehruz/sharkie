@@ -1,4 +1,27 @@
+
 const canvas = document.getElementById("can-1");
 
-const playRome = new PlayRome(canvas);
+function init() {
 
+  const playRome = new PlayRome(canvas);
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key == "ArrowRight") {
+      Keyboard.arrowRight = true;
+    }
+
+    if (event.key == "ArrowLeft") {
+      Keyboard.arrowLeft = true;
+    }
+  });
+
+  window.addEventListener("keyup", (event) => {
+    if (event.key == "ArrowRight") {
+      Keyboard.arrowRight = false;
+    }
+
+    if (event.key == "ArrowLeft") {
+      Keyboard.arrowLeft = false;
+    }
+  });
+}

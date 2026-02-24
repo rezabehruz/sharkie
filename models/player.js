@@ -1,8 +1,8 @@
 class Player extends MovableObject {
   IMAGE_KEYS = ["../assets/img/1.Sharkie/1.IDLE/1.png", "../assets/img/1.Sharkie/1.IDLE/2.png", "../assets/img/1.Sharkie/1.IDLE/3.png", "../assets/img/1.Sharkie/1.IDLE/4.png", "../assets/img/1.Sharkie/1.IDLE/5.png", "../assets/img/1.Sharkie/1.IDLE/6.png", "../assets/img/1.Sharkie/1.IDLE/7.png", "../assets/img/1.Sharkie/1.IDLE/8.png", "../assets/img/1.Sharkie/1.IDLE/9.png", "../assets/img/1.Sharkie/1.IDLE/10.png", "../assets/img/1.Sharkie/1.IDLE/11.png", "../assets/img/1.Sharkie/1.IDLE/12.png", "../assets/img/1.Sharkie/1.IDLE/13.png", "../assets/img/1.Sharkie/1.IDLE/14.png", "../assets/img/1.Sharkie/1.IDLE/15.png", "../assets/img/1.Sharkie/1.IDLE/16.png", "../assets/img/1.Sharkie/1.IDLE/17.png", "../assets/img/1.Sharkie/1.IDLE/18.png"];
-  spdX = 0.15;
+  spdX = 2;
   currentImg = 0;
-  
+
   constructor(x_, y_, width_, height_) {
     super(x_, y_, width_, height_);
 
@@ -15,10 +15,14 @@ class Player extends MovableObject {
       let i = this.currentImg % this.IMAGE_KEYS.length;
       this.img = this.imgCache[this.IMAGE_KEYS[i]];
       this.currentImg++;
+      
+      if (Keyboard.arrowRight) {
+        this.moveRight();
+      }
     }, 120);
+  }
 
-    setInterval(() => {
-      this.x += this.spdX;
-    }, 1000 / 60);
+  moveRight() {
+    this.x += this.spdX;
   }
 }
