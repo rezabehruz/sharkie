@@ -6,8 +6,6 @@ class MovableObject {
   img = new Image();
   imgCache = {};
 
-  playRome;
-
   constructor(x_, y_, width_, height_) {
     this.x = x_;
     this.y = y_;
