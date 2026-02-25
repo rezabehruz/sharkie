@@ -17,7 +17,7 @@ class Player extends MovableObject {
       this.img = this.imgCache[this.IMAGE_KEYS[i]];
       this.currentImg++;
 
-      if (Keyboard.arrowRight && this.x <= 335) {
+      if (Keyboard.arrowRight && this.x <= 600) {
         this.moveRight();
       }
 
@@ -30,7 +30,8 @@ class Player extends MovableObject {
   moveRight() {
     this.backDirection = false;
     this.x += this.spdX;
-    PlayRome.camera_x -= this.spdX-1;
+    if(PlayRome.camera_x > -390)
+    PlayRome.camera_x -= this.spdX;
   }
   
   moveLeft() {

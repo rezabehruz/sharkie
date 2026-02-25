@@ -1,16 +1,14 @@
 class Background {
-  width;
-  height;
+  width = 350;
+  height = 150;
   x;
-  y;
+  y = 0;
   img = new Image();
   playRome;
 
-  constructor(src_, x_,playRome) {
+  constructor(src_, x_) {
     this.img.src = src_;
     this.x = x_;
-    this.y = 0;
-    this.width = playRome.can.width;
-    this.height = playRome.can.height;
+    
   }
 }

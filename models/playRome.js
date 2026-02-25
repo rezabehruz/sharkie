@@ -3,18 +3,20 @@ class PlayRome {
   ctx;
 
   backGround_Objects;
+  enemies;
+  
 
   static camera_x = 0;
 
   constructor(canvas) {
     this.can = canvas;
     this.ctx = canvas.getContext("2d");
-
-    this.backGround_Objects = [new Background("../assets/img/3. Background/Legacy/Layers/5. Water/D1.png", 0, this), new Background("../assets/img/3. Background/Legacy/Layers/5. Water/D2.png", 300, this), new Background("../assets/img/3. Background/Legacy/Layers/2. Floor/D1.png", 0, this), new Background("../assets/img/3. Background/Legacy/Layers/2. Floor/D2.png", 300, this)];
-
+    
     this.player = new Player(10, 10, 80, 100);
-    this.enemy1 = new Enemy(250, 60, 35, 27);
-    this.enemy2 = new Enemy(200, 60, 35, 27);
+
+    this.backGround_Objects = level1.backGround_objects;
+
+    this.enemies = level1.enemies;
 
     this.draw();
   }
@@ -29,8 +31,8 @@ class PlayRome {
     });
 
     this.drawObject(this.player);
-    this.drawObject(this.enemy1);
-    this.drawObject(this.enemy2);
+
+    this.enemies.forEach((enemy)=> this.drawObject(enemy));
 
     this.ctx.translate(-PlayRome.camera_x, 0);
 
