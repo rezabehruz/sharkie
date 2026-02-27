@@ -1,6 +1,6 @@
 class Background {
-  width = 350;
-  height = 150;
+  width = 720;
+  height = 400;
   x;
   y = 0;
   img = new Image();

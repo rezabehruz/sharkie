@@ -12,7 +12,7 @@ class PlayRome {
     this.can = canvas;
     this.ctx = canvas.getContext("2d");
     
-    this.player = new Player(10, 10, 80, 100);
+    this.player = new Player(10, -20, 80, 100);
 
     this.backGround_Objects = level1.backGround_objects;
 

@@ -13,6 +13,10 @@ function init() {
     if (event.key == "ArrowLeft") {
       Keyboard.arrowLeft = true;
     }
+
+    if (event.key == "ArrowUp") {
+      Keyboard.arrowUp = true;
+    }
   });
 
   window.addEventListener("keyup", (event) => {
@@ -22,6 +26,10 @@ function init() {
 
     if (event.key == "ArrowLeft") {
       Keyboard.arrowLeft = false;
+    }
+
+      if (event.key == "ArrowUp") {
+      Keyboard.arrowUp = false;
     }
   });
 }
